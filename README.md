@@ -11,7 +11,7 @@ This parallel system is created to fulfill the final task for distributed and pa
 * __Muhammad Maulud Hidayatullah Rambe__ - _Senior Team Member_ - [GitHub](https://github.com/mmauludhr)
 
 ## Additional Note
-Report of the simulation can be seen [here.](https://docs.google.com/document/d/1jaI6eooyWWIcKGAMSVnSrkc9LcWbBamf3Py4pmhyuiE/edit?usp=sharing) _*Note: The report is written in Indonesian Language_
+Report of the simulation can be seen [here.](https://drive.google.com/open?id=1jaI6eooyWWIcKGAMSVnSrkc9LcWbBamf3Py4pmhyuiE) _*Note: The report is written in Indonesian Language_
 
 # Running & Testing
 ## How to Run the System
