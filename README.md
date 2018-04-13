@@ -4,11 +4,11 @@
 This parallel system is created to fulfill the final task for distributed and parallel system class. The topic of this system is __Password Cracking__.
 
 # Authors
-* __Yusuf Yunadian__ - _Project Leader_ - [GitHub](https://github.com/)
-* __Muhammad Maulud Hidayatullah Rambe__ - _Senior Team Member_ - [GitHub](https://github.com/)
-* __Faishal Wafi Nurwariz__ - _Senior Team Member_ - [GitHub](https://github.com/)
-* __Muhammad Widadio Ilham__ - _Senior Team Member_ - [GitHub](https://github.com/)
-* __Chando Anggara Natanael Batubara__ - _Senior Team Member_ - [GitHub](https://github.com/)
+* __Yusuf Yunadian__ - _Project Leader_ - [GitHub](https://github.com/chandonatanael)
+* __Faishal Wafi Nurwariz__ - _Senior Team Member_ - [GitHub](https://github.com/faishalwafi)
+* __Muhammad Widadio Ilham__ - _Senior Team Member_ - [GitHub](https://github.com/dioilham)
+* __Chando Anggara Natanael Batubara__ - _Senior Team Member_ - [GitHub](https://github.com/chandonatanael)
+* __Muhammad Maulud Hidayatullah Rambe__ - _Senior Team Member_ - [GitHub](https://github.com/mmauludhr)
 
 ## Additional Note
 Report of the simulation can be seen [here.](https://docs.google.com/document/d/1jaI6eooyWWIcKGAMSVnSrkc9LcWbBamf3Py4pmhyuiE/edit?usp=sharing) _*Note: The report is written in Indonesian Language_
