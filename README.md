@@ -15,7 +15,8 @@ Report of the simulation can be seen [here.](https://drive.google.com/open?id=1j
 
 # Running & Testing
 ## How to Run the System
-This system is build using the Python programming language. In order to run this system, you have to already install python in your machine.
+This system is build using the Python 2.7 programming language. In order to run this system, you have to already install python 2.7 in your machine.
+Also you need to download [rockyou dictionary](https://drive.google.com/open?id=1PX6XJZBaVwP5fIEfGbUDN2Wlq-TAjK5b) and place it in your local repository.
 
 # Update & Bug
 ## Update
