@@ -4,7 +4,7 @@
 This parallel system is created to fulfill the final task for distributed and parallel system class. The topic of this system is __Password Cracking__.
 
 # Authors
-* __Yusuf Yunadian__ - _Project Leader_ - [GitHub](https://github.com/chandonatanael)
+* __Yusuf Yunadian__ - _Project Leader_ - [GitHub](https://github.com/yyunadian)
 * __Faishal Wafi Nurwariz__ - _Senior Team Member_ - [GitHub](https://github.com/faishalwafi)
 * __Muhammad Widadio Ilham__ - _Senior Team Member_ - [GitHub](https://github.com/dioilham)
 * __Chando Anggara Natanael Batubara__ - _Senior Team Member_ - [GitHub](https://github.com/chandonatanael)
