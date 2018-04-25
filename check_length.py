@@ -12,7 +12,7 @@ except:
 listpw = []
 for password in pwfile:
     counter += 1
-    # pswrd = password.strip()
-    # listpw.append(pswrd)
+    pswrd = password.strip()
+    listpw.append(pswrd)
 
 print len(listpw), "&", counter

@@ -23,6 +23,7 @@ Also you need to download [rockyou.txt dictionary](https://drive.google.com/open
 ## Update
 __13/04/2018__ - Created GitHub Repository, README.md, and other external links.<br/>
 __23/04/2018__ - Added Base Programs.<br/>
+__24/04/2018__ - Added Main Program (Uncompleted).<br/>
 
 ## Bug
 *None Found*
