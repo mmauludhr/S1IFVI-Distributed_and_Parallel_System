@@ -31,16 +31,35 @@ def splitIntoFive(list_password):
 
     return part1, part2, part3, part4, part5
 ################################################################################
-def crackPassword(list_password, part):
-    counter = 1
-
+def crackPassword(password_hash, list_password, part):
     if part/(len(list_password)/5) == 1:
-        print "range awal"
-    elif part/len(list_password) == 1:
-        print "range akhir"
-    else:
-        print "range tengah"
+        for index in range(0, part):
+            check_md5 = md5.new(list_password[index]).hexdigest()
+            if password_hash == check_md5:
+                print "\nMatch Found! \nPassword is %s" % list_password[index]
+                print "range awal"
+                break
+        else: print "\nNo Match Found!"
+
+    if part/len(list_password) == 1:
+        for index in range((part-(len(list_password)/5))+1, part):
+            check_md5 = md5.new(list_password[index]).hexdigest()
+            if password_hash == check_md5:
+                print "\nMatch Found! \nPassword is %s" % list_password[index]
+                print "range akhir"
+                break
+        else: print "\nNo Match Found!"
+
+    if (part/(len(list_password)/5) != 1) and (part/len(list_password) != 1):
+        for index in range((len(list_password)/5)*4, part):
+            check_md5 = md5.new(list_password[index]).hexdigest()
+            if password_hash == check_md5:
+                print "\nMatch Found! \nPassword is %s" % list_password[index]
+                print "range tengah"
+                break
+        else: print "\nNo Match Found!"
 ################################################################################
 list_password = getListPassword()
 a, b, c, d, e = splitIntoFive(list_password)
-crackPassword(list_password, e)
+password_hash = "cd69b4957f06cd818d7bf3d61980e291"
+crackPassword(password_hash, list_password, e)
