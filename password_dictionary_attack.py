@@ -3,7 +3,7 @@ import md5
 counter = 1
 
 pass_in = raw_input("Please input the MD5 Hash: ")
-pwfile = "rockyou.txt"
+pwfile = aw_input("Enter file name: ")
 
 try:
     pwfile = open(pwfile, "r")

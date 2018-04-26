@@ -1,12 +1,11 @@
 import md5
-import os
-import sys
-import multiprocessing
+import time
+import threading
 
 ################################################################################
 def getListPassword():
     # counter = 0
-    password_file = raw_input("Enter a dictionary file: ")
+    password_file = "rockyou.txt"#raw_input("Enter a dictionary file: ")
 
     try:
         password_file = open(password_file, "r")
@@ -32,34 +31,55 @@ def splitIntoFive(list_password):
     return part1, part2, part3, part4, part5
 ################################################################################
 def crackPassword(password_hash, list_password, part):
+    global isFound, start_time, end_time
     if part/(len(list_password)/5) == 1:
         for index in range(0, part):
             check_md5 = md5.new(list_password[index]).hexdigest()
             if password_hash == check_md5:
-                print "\nMatch Found! \nPassword is %s" % list_password[index]
-                print "range awal"
+                isFound = True
+                end_time = time.time()
+                print "\nMatch Found! \nHash: %s --> Password %s, Index: %d" % (password_hash, list_password[index], index)
+                print "\nTime to Complete: %fs" % (end_time - start_time)
                 break
-        else: print "\nNo Match Found!"
-
-    if part/len(list_password) == 1:
+        # else: print "\nNo Match Found!"
+    else:
         for index in range((part-(len(list_password)/5))+1, part):
             check_md5 = md5.new(list_password[index]).hexdigest()
             if password_hash == check_md5:
-                print "\nMatch Found! \nPassword is %s" % list_password[index]
-                print "range akhir"
+                isFound = True
+                end_time = time.time()
+                print "\nMatch Found! \nHash: %s --> Password %s, Index: %d" % (password_hash, list_password[index], index)
+                print "\nTime to Complete: %fs" % (end_time - start_time)
                 break
-        else: print "\nNo Match Found!"
-
-    if (part/(len(list_password)/5) != 1) and (part/len(list_password) != 1):
-        for index in range((len(list_password)/5)*4, part):
-            check_md5 = md5.new(list_password[index]).hexdigest()
-            if password_hash == check_md5:
-                print "\nMatch Found! \nPassword is %s" % list_password[index]
-                print "range tengah"
-                break
-        else: print "\nNo Match Found!"
+        # else: print "\nNo Match Found!"
 ################################################################################
-list_password = getListPassword()
-a, b, c, d, e = splitIntoFive(list_password)
-password_hash = "cd69b4957f06cd818d7bf3d61980e291"
-crackPassword(password_hash, list_password, e)
+if __name__ == '__main__':
+    global isFound, start_time, end_time
+    isFound = False
+    print "Moving each password to a list.."
+    list_password = getListPassword()
+    a, b, c, d, e = splitIntoFive(list_password)
+    password_hash = "ad02c6d7e1456d47c134b7c60f89aae2"
+    numofthreads = 5
+    # threadList = []
+
+    start_time = time.time()
+    print("Starting Task..")
+    for i in range(numofthreads):
+        t1 = threading.Thread(target=crackPassword, args=(password_hash, list_password,a))
+        t2 = threading.Thread(target=crackPassword, args=(password_hash, list_password, b))
+        t3 = threading.Thread(target=crackPassword, args=(password_hash, list_password, c))
+        t4 = threading.Thread(target=crackPassword, args=(password_hash, list_password, d))
+        t5 = threading.Thread(target=crackPassword, args=(password_hash, list_password, e))
+
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    t5.start()
+
+    # threadList.append(t1)
+    # threadList.append(t2)
+    # threadList.append(t3)
+    # threadList.append(t4)
+    # threadList.append(t5)
