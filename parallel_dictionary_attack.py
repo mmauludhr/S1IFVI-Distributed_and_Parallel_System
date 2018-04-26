@@ -1,11 +1,16 @@
+# Authors
+# Muhammad Maulud Hidayatullah Rambe - Informatics Engineering, Telkom University, 2018
+# Chando Anggara Natanael Batubara - Informatics Engineering, Telkom University, 2018
+
+
 import md5
 import time
 import threading
 
 ################################################################################
 def getListPassword():
-    # counter = 0
-    password_file = "rockyou.txt"#raw_input("Enter a dictionary file: ")
+    # password_file = "rockyou.txt"
+    password_file = raw_input("Enter a dictionary file: ")
 
     try:
         password_file = open(password_file, "r")
@@ -15,7 +20,6 @@ def getListPassword():
 
     list_password = []
     for password in password_file:
-        # counter += 1
         pswrd = password.strip()
         list_password.append(pswrd)
 
@@ -53,13 +57,15 @@ def crackPassword(password_hash, list_password, part):
                 break
         # else: print "\nNo Match Found!"
 ################################################################################
+################################################################################
 if __name__ == '__main__':
     global isFound, start_time, end_time
     isFound = False
     print "Moving each password to a list.."
     list_password = getListPassword()
     a, b, c, d, e = splitIntoFive(list_password)
-    password_hash = "ad02c6d7e1456d47c134b7c60f89aae2"
+    # password_hash = "ad02c6d7e1456d47c134b7c60f89aae2"
+    password_hash = raw_input("Input Hash: ")
     numofthreads = 5
     # threadList = []
 

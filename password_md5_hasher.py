@@ -1,3 +1,6 @@
+ # Authors
+ # Muhammad Maulud Hidayatullah Rambe - Informatics Engineering, Telkom University, 2018
+
 import hashlib
 
 num_of_hash = raw_input("Number of password to hash: ")

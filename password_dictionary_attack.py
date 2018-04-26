@@ -1,3 +1,6 @@
+# Author
+# Don Does 30 Official - Youtube, 2016
+
 import md5
 
 counter = 1

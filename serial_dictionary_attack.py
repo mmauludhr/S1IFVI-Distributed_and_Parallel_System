@@ -1,3 +1,6 @@
+# Authors
+# Muhammad Maulud Hidayatullah Rambe - Informatics Engineering, Telkom University, 2018
+
 import md5
 import time
 import threading
@@ -41,6 +44,7 @@ def crackPassword(password_hash, list_password):
             print "\nTime to Complete: %fs" % (end_time - start_time)
             break
         # else: print "\nNo Match Found!"
+################################################################################
 ################################################################################
 if __name__ == '__main__':
     global isFound, start_time, end_time
